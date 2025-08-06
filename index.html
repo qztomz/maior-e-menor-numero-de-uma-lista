@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <title>Desafio 11 - Maior e Menor</title>
+</head>
+<body>
+ <h1>Maior e Menor Número</h1>
+ <input type="text" id="numeros" placeholder="Ex: 3,7,2,9,5">
+ <button onclick="maiorMenor()">Verificar</button>
+ <p id="resultado"></p>
+ 
+ <script>
+   function maiorMenor() {
+     const numeros = document.getElementById("numeros").value.split(",").map(Number);
+     const maior = Math.max(...numeros);
+     const menor = Math.min(...numeros);
+     document.getElementById("resultado").innerText = Maior: ${maior} | Menor: ${menor};
+   }
+ </script>
+</body>
+</html>
